@@ -24,6 +24,10 @@
  * Dummy devices (replace them with your own or something else entirely!)
  */
 
+#version {
+    font-size: 9pt;
+}
+
 .product-device {
     position: absolute;
     right: 7%;
