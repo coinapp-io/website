@@ -21,6 +21,13 @@
 }
 
 
+@media (max-width: 767px) {
+    body {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
 #version {
     font-size: 9pt;
 }
@@ -50,6 +57,11 @@
  * Extra utilities
  */
 
+.mx-auto {
+    width: 80%;
+    height: 420px;
+}
+
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
@@ -65,5 +77,35 @@
         flex: 1;
     }
 }
+
+@media (max-width: 768px) {
+    BODY {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mx-auto {
+        width: 100%;
+        height: 170px;
+    }
+    .d-md-flex {
+        margin-top: 20px;
+    }
+    .my-3 {
+        padding: 0px !important;
+    }
+    H2 {
+        font-size: 1.5rem;
+    }
+    .lead {
+        font-size: 0.8rem;
+    }
+    .top-area {
+        height: 350px;
+    }
+    .btn {
+        padding: .275rem .55rem;
+    }
+}
+
 
 .overflow-hidden { overflow: hidden; }
