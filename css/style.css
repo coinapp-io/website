@@ -94,7 +94,7 @@
         padding: 0px !important;
     }
     H2 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     .lead {
         font-size: 0.8rem;
@@ -104,6 +104,7 @@
     }
     .btn {
         padding: .275rem .55rem;
+        font-size: 9pt;
     }
 }
 
