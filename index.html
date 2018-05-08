@@ -245,14 +245,23 @@
 
     function GetLatestReleaseInfo() {
         $.getJSON("https://api.github.com/repos/coinapp-io/desktop/releases/latest").done(function (json) {
-            var version = json.tag_name;
-            var mac = json.assets[1].browser_download_url;
-            var windows = json.assets[3].browser_download_url;
-            var linux = json.assets[5].browser_download_url;
-            $("#win_download").attr("href", windows);
+            $("#version").html(json.tag_name);
+            var mac;
+            var win;
+            var linux;
+            $.each(json.assets, function(k, v) {
+                var ext = v.browser_download_url.split('.').pop();
+                if (ext=="dmg"){
+                    mac = v.browser_download_url;
+                } else if (ext=="exe"){
+                    win = v.browser_download_url;
+                } else if  (ext=="deb"){
+                    linux = v.browser_download_url;
+                }
+            });
+            $("#win_download").attr("href", win);
             $("#mac_download").attr("href", mac);
             $("#linux_download").attr("href", linux);
-            $("#version").html(version);
         });
     }
 </script>
